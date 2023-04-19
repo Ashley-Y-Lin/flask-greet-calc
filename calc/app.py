@@ -4,7 +4,6 @@ from operations import add, sub, mult, div
 app = Flask(__name__)
 
 # Put your app in here.
-# TODO: add docstrings
 
 
 @app.get("/add")
@@ -46,6 +45,7 @@ def div_nums():
 @app.get("/math/<operation>")
 def all_in_one(operation):
     """Returns string after performing specific operation"""
+    
     OPERATIONS = {"add":add, "sub":sub, "mult":mult, "div":div}
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
