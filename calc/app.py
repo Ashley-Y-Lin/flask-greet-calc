@@ -50,4 +50,4 @@ def all_in_one(operation):
     a = int(request.args.get("a"))
     b = int(request.args.get("b"))
 
-    return str(OPERATIONS[operation(a, b)])
+    return str(OPERATIONS[operation](a, b))
